@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+
+        header div{
+            padding:5px;
+            font-size:18px; 
+        }
+        #menu ul {
+            background: #1F568B;
+            list-style-type: none;
+            text-align: center;
+        }
+        #menu a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+        }
+        #menu a:hover {
+            background: #F1F1F1;
+            color: #333;
+        }
+        #menu li {
+            color: #f1f1f1;
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: -5px;
+        }
+        
+        footer{
+            background-color:#ccc;
+            text-align:center;
+    
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Examining</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+               <!-- <a class="navbar-brand" asp-area="" asp-page="/Index">Examining</a> -->
+               <div class="login100-form-avatar">
+
+                    <img src="~/images/icon_healthy.png" alt="Home" width="50" height="50">
+                   
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            
+                    <ul class="navbar-nav flex-grow-1">
+                        <p>Healthy<p>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="Login/Login">Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="Register/Register">Đăng Kí</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Examining - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

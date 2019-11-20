@@ -1,0 +1,73 @@
+﻿@page
+@model Examining.Pages.Register.RegisterModel
+@{
+    ViewData["Title"] = "Đăng Nhập";
+}
+<head>
+  <title>Patient Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="~/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="~/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="~/css/util.css">
+  <link rel="stylesheet" type="text/css" href="~/css/main.css">
+<!--===============================================================================================-->
+
+
+</head>
+<body>
+  <div align="center">
+  <p><font size = "5">Đăng Kí</font></p>
+   @ViewBag.error
+    <form>
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Tên Người Dùng </td>
+                <td><input type="text" name="Tên Người Dùng"></td>
+            </tr>
+            <tr>
+                <td>Nhập SĐT</td>
+                <td><input type="tel" name="Nhập SĐT"></td>
+            </tr>
+            <tr>
+                <td>Mật Khẩu</td>
+                <td><input type="password" name="Mật Khẩu"></td>
+            </tr>
+            <tr>
+                <td>Nhập Lại Mật Khẩu</td>
+                <td><input type="password" name="Nhập Lại Mật Khẩu"></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Đăng Kí"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+
+  
+<!--===============================================================================================-->  
+  <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="~/vendor/bootstrap/js/popper.js"></script>
+  <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="~/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="~/js/main.js"></script>
+
+</body>

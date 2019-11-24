@@ -1,0 +1,49 @@
+@page
+@model Examining.Pages.Login.InforModel
+@{
+    ViewData["Name"] = "Information";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].PatientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Birthday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].Phone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Patient) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => item.Address)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

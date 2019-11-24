@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 namespace Examining
 {
     public class Startup
@@ -23,6 +24,11 @@ namespace Examining
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddSession();
+            services.AddDbContext<RegisterContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("DataConnection")));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +42,8 @@ namespace Examining
             {
                 app.UseExceptionHandler("/Error");
             }
-
+            app.UseSession();
+            
             app.UseStaticFiles();
 
             app.UseRouting();

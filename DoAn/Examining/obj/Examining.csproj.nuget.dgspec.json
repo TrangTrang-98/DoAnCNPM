@@ -175,6 +175,10 @@
             "microsoft.entityframeworkcore.sqlite": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "microsoft.entityframeworkcore.sqlserver": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [

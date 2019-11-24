@@ -1,5 +1,6 @@
 using ApplicationCore.Interfaces;
 using ApplicationCore.Entities.PatientAggregate;
+using Infrastructure.Persistence;
 using System.Collections.Generic;
 namespace Infrastructure.Persistence.Repository
 {
@@ -17,6 +18,6 @@ namespace Infrastructure.Persistence.Repository
                             .Distinct().ToList();
         }*/
 
-        protected new RegisterContext Context => Context as RegisterContext;
+        //protected new PatientContext Context => Context as PatientContext;
     }
 }

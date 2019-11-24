@@ -3,7 +3,7 @@ namespace ApplicationCore.Interfaces
 {
     public interface IRepository<T> where T : IAggregateRoot
     {
-        T GetBy(int id);
+        T GetBy(string id);
         IEnumerable<T> GetAll();
         //IEnumerable<T> Find(ISpecification<T> spec);
 

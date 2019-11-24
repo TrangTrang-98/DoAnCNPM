@@ -15,7 +15,7 @@ namespace Infrastructure.Persistence.Repository
 
         protected DbContext Context => _context;
 
-        public T GetBy(int id)
+        public T GetBy(string id)
         {
             return _context.Set<T>().Find(id);
         }

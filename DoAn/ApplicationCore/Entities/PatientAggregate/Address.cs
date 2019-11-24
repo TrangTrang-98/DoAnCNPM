@@ -3,9 +3,18 @@ namespace ApplicationCore.Entities.PatientAggregate
     public class Address // value object -- Patient
     {
         public string NumHouse{get; private set;}
-        public string Street{get; private set;}
-        public string District{get; private set;}
-        public string City{get; private set;}
-        public string Country{get; private set;}
+        public string Street{get;  set;}
+        public string District{get;  set;}
+        public string City{get;  set;}
+        public string Country{get;  set;}
+
+        public Address(string number, string street, string district, string city, string country)
+        {
+            NumHouse = number;
+            Street = street;
+            District = district;
+            City = city;
+            Country = country;
+        }
     }
 }

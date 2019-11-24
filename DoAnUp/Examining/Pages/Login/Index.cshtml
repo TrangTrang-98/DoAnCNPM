@@ -1,0 +1,72 @@
+@page
+@model Examining.Pages.Login.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Thông Tin Đăng Kí Khám Bệnh</h1>
+
+
+<table class="table">
+
+    <thead>
+
+        <tr>
+
+            <th>
+                    @Html.DisplayNameFor(model => model.ListEnrollment[0].patient)
+
+            </th>
+
+            <th>
+
+                @Html.DisplayNameFor(model => model.ListEnrollment[0].doctor)
+
+            </th>
+
+            <th>
+
+
+                    @Html.DisplayNameFor(model => model.ListEnrollment[0].enrollmentDate)       
+
+            </th>
+
+            <th></th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model.ListEnrollment)
+
+        {
+
+            <tr>
+
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.patient.PatientName)
+
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.doctor.DoctorName)
+
+                </td>    
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.enrollmentDate)
+
+                </td>
+
+                
+
+            </tr>
+
+        }
+
+
+    </tbody>
+
+</table>

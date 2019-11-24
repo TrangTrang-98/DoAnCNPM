@@ -1,0 +1,44 @@
+﻿@page
+@model Examining.Pages.Login.LoginModel
+@{
+    ViewData["Title"] = "Đăng Nhập";
+}
+<head>
+  <title>Patient Login</title>
+</head>
+<html>
+<body>
+  <div align="center">
+  <p><font size = "5">Đăng Nhập</font></p>
+   @Model.msg
+    <form method="post" asp-page="Index" >
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Tên Người Dùng</td>
+                <td><input type="text" asp-for="@Model.username"></td>
+            </tr>
+            <tr>
+                <td>Mật Khẩu</td>
+                <td><input type="password" asp-for="@Model.password"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Đăng Nhập"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+
+  
+<!--===============================================================================================-->  
+  <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="~/vendor/bootstrap/js/popper.js"></script>
+  <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="~/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="~/js/main.js"></script>
+
+</body>
+</html>
